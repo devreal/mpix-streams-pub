@@ -1,0 +1,10 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}/@CMAKE_INSTALL_BINDIR@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: MPIX-STREAMS
+Description: Library associating accelerator compute streams with MPI objects
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lmpix-streams @EXTRA_LIBS_EXPANDED@ @EXTRA_LDFLAGS@
+Cflags: -I${includedir} @EXTRA_INCLUDES_EXPANDED@ @EXTRA_CFLAGS@
